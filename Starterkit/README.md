@@ -1,4 +1,4 @@
-![image](https://github.com/declan-pxc/PLCnext-Examples/assets/143350935/295e7e47-7b75-44e9-b966-cd7b50296a75)# Getting started with PLCnext Starterkit
+# Getting started with PLCnext Starterkit
 Phoenix Contact has a [Starterkit](https://phoenixcontact.net/product/1188165) available for purchase that allows for development of PLCnext Control.
 Download and install the latest [PLCnext Engineer](https://phoenixcontact.net/product/1046008) to be able to download the project. This is to be installed on Windows machines and with increased Cybersecurity, if there are any errors that are raised, you may need to check with your IT administrator as to whether anything is being blocked.
 You can find the source files that are going to be used in the src folder. Download these too.
