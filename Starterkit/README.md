@@ -116,4 +116,4 @@ void June2024L300Program::Execute()
 } // end of namespace June2024L300
 ```
 
-If you are wanting to learn more about PLCnext, please consider our [training courses](https://www.phoenixcontact.com/en-au/industries/plcnext-technology/plcnextlab).
+If you are wanting to learn more about PLCnext, consider our [training courses](https://www.phoenixcontact.com/en-au/industries/plcnext-technology/plcnextlab).
