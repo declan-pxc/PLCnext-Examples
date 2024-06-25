@@ -84,6 +84,7 @@ This program was created using the [PLCnext Toolchain](https://www.plcnext.help/
 
 June2024L300.hpp:
 ```
+...
 public:
 	   //#port
            //#attributes(Input)
@@ -94,6 +95,7 @@ public:
            //#attributes(Output)
            //#name(xGDSOutput)
            boolean xOutput;
+...
 ```
 
 June2024L300.cpp:
