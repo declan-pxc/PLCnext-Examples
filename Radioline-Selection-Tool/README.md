@@ -13,6 +13,17 @@ This tool is a PLCnext project which means it can be run both on a PLCnext contr
 
 ### Download and Run the Project
 
+When running the libraries, you may find that there is an error. It doesn't look like the libraries extract in the same way. The PLCnextBase Library expects to be in the following format:
+PLCnextBase_1_x_1.pcwlx
+PLCnextBase_1_x_1 (folder)
+|_ PLCnextBase.pcwlx
+|_ PLCnextBaseServices.pcwlx
+
+![image](https://github.com/declan-pxc/PLCnext-Examples/assets/143350935/7b209605-1995-4ffa-8002-8f15c9b1fdf5)
+
+
+If you highlight the error, it should tell you the expected destination. Once complete, delete the library and re-add by *Adding User Library*
+
 Navigate to the eHMI
 
 ### 1. Select Radio
