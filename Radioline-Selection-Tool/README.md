@@ -7,7 +7,7 @@ This tool is a PLCnext project which means it can be run both on a PLCnext contr
 # Instructions
 
 ### Requirements
-- PLCnext Control *AXC F 2152* or [*Simulator*](#simulator)
+- PLCnext Control *AXC F 2152* (with FW 2024.0 LTS or newer) or [*Simulator*](#simulator)
 - PLCnext Engineer 2024.0.2 LTS or newer
 - The project *Radioline Selection.pcweax*
 
