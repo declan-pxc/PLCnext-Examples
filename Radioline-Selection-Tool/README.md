@@ -1,6 +1,6 @@
 # Introduction
 
-This selection tool can be used to help guide the selection of Phoenix Contact Radiolines, antennas and cables. This tool does not take quantities or IO into consideration. It will guide through the total cable length, gain of the system as well as asisstance with the different connection options.
+This selection tool can be used to help guide the selection of Phoenix Contact Radiolines, antennas and cables. This tool does not take quantities or IO into consideration. It will guide through the total cable length, gain of the system as well as asisstance with the different connection options. Once complete, you are able to download a CSV of the BOM created.
 
 This tool is a PLCnext project which means it can be run both on a PLCnext control hardware. It can also be run on the [simulator](#simulator)
 
