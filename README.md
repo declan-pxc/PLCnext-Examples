@@ -10,4 +10,4 @@
 - [PLCnext Engineer](https://www.phoenixcontact.com/en-au/products/programming-plcnext-engineer-1046008) – the programming software can be found in the Downloads section
 - [PLCnext Runtime](https://www.plcnext-runtime.com/) – good reference for PLCnext including higher-level languages
 
-Also check who I am following for additional PLCnext Github resources.
+Also check who I am following and repositories I have forked from other uses for additional PLCnext Github resources.
