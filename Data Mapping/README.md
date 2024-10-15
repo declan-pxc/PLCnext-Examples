@@ -10,3 +10,5 @@ The file _Comm_Device_1_MBCLIENT.pcwex_ utilises the MODBUS library available in
 Due to the limitations I have seen, the Profinet Device needed to be removed as the IP addresses conflicted. In reality, this is an edge case (having both Profinet and MODBUS communicating to the same device).
 
 To configure, a server needs to be configured, and from there you can configure the Function Code and addresses to be polled. It then provides ports in GDS that can be connected to a variable. It simplifies the integration of using MODBUS clients significantly.
+
+__You will need to enable Modbus Client WBM > System Services__
