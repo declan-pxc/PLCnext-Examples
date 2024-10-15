@@ -1,4 +1,5 @@
 # Data Mapping are examples of mapping data through Profinet and MODBUS between two AXC F 2152s.
+The projects _Comm_Device_1*_ and _Comm_Device_2_ can be downloaded to two PLCnexts to see how data mapping can be achieved between the controllers.
 Notes:
 - For mapping data with Ethernet/IP, this will be similar to Profinet in terms of mapping the system variables for an EIP scanner.
 - For transferring REALs (or other datatypes), use the PLCnext Base library REAL_TO_BUF and BUF_TO_REAL FBs.
