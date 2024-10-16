@@ -36,6 +36,11 @@ To be able to connect to the PLC, you may need to change your IP address on your
 ## Downloading the project
 
 Open PLCnext Engineer and _File > Open Project > OEEDemo.pcweax_. You will receive a popup about saving libraries, keep the defaults and continue.
+
+You may find that there is an error with the library. This is likely due to how it saves the libraries from the archive into your library folder. For PLCnextBase, make a folder called _PLCnextBase_1_6_4_ and put the sub-libraries _PLCnextBase.pcwlx_ and _PLCnextBaseServices.pcwlx_ into this folder.
+
+![How to add PLCnext Libraries from Archive](https://github.com/user-attachments/assets/7fc15768-48c9-47bb-b191-b4c574f26d9f)
+
 1. Double click on Project and select the tab _Online Controllers_.
 2. Select your ethernet interface using the drop down and click the circle disk to _scan the network_. This method uses a Profinet method for device scanning and is able to find the controller even if it is outside of your network.
 ![project-search](https://github.com/declan-pxc/PLCnext-Examples/assets/143350935/3e749832-f923-4b90-a8ab-06eccfcdadeb)
@@ -50,7 +55,7 @@ Open PLCnext Engineer and _File > Open Project > OEEDemo.pcweax_. You will recei
 ## Advanced Functionality
 
 The OEE value is logged in the PLC. I have developed a simple python script that reads this log and saves it as a CSV that can be downloaded by the controller. This script will need to be copied to the PLC for this functionality.
-1. Open up command prompt and type in _scp "/path-to-where-the-python-script-is-saved/oee-report.py" admin@plc-ip-address:~/oee-report.py_ and press enter. (For Windows machines, press `SHIFT`, right click on the file and select _Copy as Path_. Right click in command prompt to paste.) Note: you are not to be SSH'd into the PLC, this command needs to run from your machine.
+1. Open up command prompt and type in _scp "\path-to-where-the-python-script-is-saved\oee-report.py" admin@plc-ip-address:~/oee-report.py_ and press enter. (For Windows machines, press `SHIFT`, right click on the file and select _Copy as Path_. Right click in command prompt to paste.) Note: you are not to be SSH'd into the PLC, this command needs to run from your machine.
 2. Enter the password for the PLC. You will not see your inputs as it is a password, so make sure it is correct and hit enter.
 3. You should see the file with 100% indicating that it has been copied across
 4. Go to the HMI and click on _Run Report_. Once complete, you should see a button to be able to download the CSV.
@@ -73,8 +78,13 @@ Click on the _Availiability_ tab and you can view the calculation for the Availa
 - There is a function called rCalcTotal that has been created as the same formula is used multiple times in the code. You can view it in _Components>Programming>Functions & Function Blocks>rCalcTotal_
 Similar calculations have been done in the tabs _Performance_ and _Quality_.
 
-The OEE tab shows how the overall OEE value is calculated and also that the past "10 days" is also saved into a simple array.
+## HMI
+This project has two screens. The Planning Time has been disabled as it is using the Analogue Input. Click on the object and select dynamics to change if you don't have an Analogue Input connected as configured.
 
+![Home Screen](https://github.com/user-attachments/assets/00d46aa5-a3bf-4e41-a002-4fc2a73139f6)
+![PLCnext Information](https://github.com/user-attachments/assets/945dfc62-6ab2-40b3-be37-ae4557b5c4a7)
+
+<!---
 ### C++ Program
 C++ Programs can be easily integrated and run along with 61131 programs on the PLCnext. These can be written to be Realtime, non-Realtime (but still within the PLCnext FW) or running directly on the Operating System (OS).
 There is a program running that has been built with C++ running in this project. _June2024L300_ is a simple program that assigns an output equal to the input. In this case, these have been binded to the first digital input (button) and first digital output. You can see this if you navigate on the left-hand side to _Plant_, double click on _PLCnext_ and open the _GDS Port List_ tab. You will be able to see the ports here. 
@@ -112,8 +122,8 @@ void June2024L300Program::Execute()
     //implement program 
 	xOutput = xInput;
 }
-
 } // end of namespace June2024L300
 ```
+--->
 
 If you are wanting to learn more about PLCnext, consider our [training courses](https://www.phoenixcontact.com/en-au/industries/plcnext-technology/plcnextlab).
