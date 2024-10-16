@@ -1,7 +1,7 @@
 import sqlite3
 
-# Connect to the database (replace "mydb.db" with your actual database file)
-conn = sqlite3.connect("/opt/plcnext/logs/datalogger/OEEReport.db")
+# Connect to the database
+conn = sqlite3.connect("/opt/plcnext/logs/datalogger/OEEdb.db")
 cursor = conn.cursor()
 
 # Execute a query to fetch table names
@@ -21,7 +21,7 @@ report = "Timestamp,OEE\n"
 for row in data:
     report += f"{row[0]},{row[2]}\n"
 
-# Save the report to a file (replace "report.txt" with your desired file name)
+# Save the report to a file
 with open("/opt/plcnext/projects/PCWE/Services/Ehmi/ehmi/oee-report.csv", "w") as f:
     f.write(report)
 
