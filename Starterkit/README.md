@@ -130,14 +130,14 @@ void June2024L300Program::Execute()
 ## Node-RED - [SD Card Required](https://www.phoenixcontact.com/global-search/search?q=sd+flash+plcnext&_locale=en-AU&_realm=au)
 
 1. Download the Node-RED application from the [PLCnext Store](https://www.plcnextstore.com/permalinks/apps/latest/60002172000507). _Note: You will need a free account to download._
-2. Go to WBM > Administration > PLCnext Apps
+2. Go to [WBM](https://192.168.1.10/wbm) > Administration > PLCnext Apps
 3. Install the Node-RED application. When the app is started, it will take ~20mins to properly start. You will find that the PLC will be unresponsive during this time. Once started, it will power cycle fine and it will not take 20mins to boot up again.
-4. Navigate on a browser to <plc-ip-address>:51880. This is where you can access Node-RED.
+4. Navigate on a browser to [https://192.168.1.10:51880](https://192.168.1.10:51880). This is where you can access Node-RED.
 5. Right Click on the _IIOT Gateway Connector_ example and disable it.
 6. Press `CNTRL-I` to import.
 7. Download or copy the text from the _node-red.json_ file on Github and paste it into the red box.
 8. You may need to update the IP address of the Plc-Connector by double clicking on _plc-read-variables_. Also update the authentication information if required.
 9. Once Done, click deploy.
-10. On your browser, go to <plc-ip-address>:51880/ui, you should be able to see the values coming through. You can also update the rework number through the UI.
+10. On your browser, go to [https://192.168.1.10:51880/ui](https://192.168.1.10:51880/ui), you should be able to see the values coming through. You can also update the rework number through the UI.
 
 If you are wanting to learn more about PLCnext, consider our [training courses](https://www.phoenixcontact.com/en-au/industries/plcnext-technology/plcnextlab).
