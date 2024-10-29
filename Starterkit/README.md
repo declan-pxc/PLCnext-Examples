@@ -140,9 +140,13 @@ void June2024L300Program::Execute()
 8. Add a Plc-read-variables node. You can put the following into the variables box `Arp.Plc.Eclr/OEE_IEE1.OEE`
 9. You may need to update the IP address of the Plc-Connector by double clicking on _plc-read-variables_ and setting it to 192.168.1.10.
 10. Add a change node.
+
 ![Screenshot 2024-10-29 145836](https://github.com/user-attachments/assets/1e2247f0-72d4-46f9-8efd-5d291391a8e3)
+
 11. Add a Gauge node
+
 ![Gauge](https://github.com/user-attachments/assets/12b01d8e-3bee-482c-b3cf-abc611aef954)
+
 12. In the function node, add the following text.
 ```
 var value = msg.payload;
@@ -156,6 +160,7 @@ msg.payload= {variables : [
 };
 return msg;
 ```
+
 ![Function](https://github.com/user-attachments/assets/9c913bc5-2c49-4db3-93f7-9faf228e2945)
 
 13. Add a Plc-write-variables node and make sure it has the same PLC connection. You may need to deploy it before it says _connected_.
