@@ -136,7 +136,11 @@ void June2024L300Program::Execute()
 5. Right Click on the _IIOT Gateway Connector_ example and disable it.
 6. Here is an overview of what it will look like. _Note: debug nodes were just for testing and are not required._
 ![Node-Red Flow](https://github.com/user-attachments/assets/a84ee0a8-abb1-4abd-82a3-1290c2e21fd0)
-7. The inject node, has been edited to repeat at intervals.
+7. Add an inject node
+
+![Inject](https://github.com/user-attachments/assets/2d2437a4-5268-4d8f-9c60-399747802d0f)
+
+
 8. Add a Plc-read-variables node. You can put the following into the variables box `Arp.Plc.Eclr/OEE_IEE1.OEE`
 9. You may need to update the IP address of the Plc-Connector by double clicking on _plc-read-variables_ and setting it to 192.168.1.10.
 10. Add a change node.
