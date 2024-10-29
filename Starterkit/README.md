@@ -134,7 +134,7 @@ void June2024L300Program::Execute()
 3. Install the Node-RED application. When the app is started, it will take ~20mins to properly start. You will find that the PLC will be unresponsive during this time. Once started, it will power cycle fine and it will not take 20mins to boot up again.
 4. Navigate on a browser to [https://192.168.1.10:51880](https://192.168.1.10:51880). This is where you can access Node-RED.
 5. Right Click on the _IIOT Gateway Connector_ example and disable it.
-6. Add the following nodes.
+6. Here is an overview of what it will look like. _Note: debug nodes were just for testing and are not required._
 ![Node-Red Flow](https://github.com/user-attachments/assets/a84ee0a8-abb1-4abd-82a3-1290c2e21fd0)
 7. The inject node, has been edited to repeat at intervals.
 8. Add a Plc-read-variables node. You can put the following into the variables box `Arp.Plc.Eclr/OEE_IEE1.OEE`
