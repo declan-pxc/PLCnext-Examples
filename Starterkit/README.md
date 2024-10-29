@@ -134,10 +134,32 @@ void June2024L300Program::Execute()
 3. Install the Node-RED application. When the app is started, it will take ~20mins to properly start. You will find that the PLC will be unresponsive during this time. Once started, it will power cycle fine and it will not take 20mins to boot up again.
 4. Navigate on a browser to [https://192.168.1.10:51880](https://192.168.1.10:51880). This is where you can access Node-RED.
 5. Right Click on the _IIOT Gateway Connector_ example and disable it.
-6. Press `CNTRL-I` to import.
-7. Download or copy the text from the _node-red.json_ file on Github and paste it into the red box.
-8. You may need to update the IP address of the Plc-Connector by double clicking on _plc-read-variables_. Also update the authentication information if required.
-9. Once Done, click deploy.
-10. On your browser, go to [https://192.168.1.10:51880/ui](https://192.168.1.10:51880/ui), you should be able to see the values coming through. You can also update the rework number through the UI.
+6. Add the following nodes.
+![Node-Red Flow](https://github.com/user-attachments/assets/a84ee0a8-abb1-4abd-82a3-1290c2e21fd0)
+7. The inject node, has been edited to repeat at intervals.
+8. Add a Plc-read-variables node. You can put the following into the variables box `Arp.Plc.Eclr/OEE_IEE1.OEE`
+9. You may need to update the IP address of the Plc-Connector by double clicking on _plc-read-variables_ and setting it to 192.168.1.10.
+10. Add a change node.
+![Screenshot 2024-10-29 145836](https://github.com/user-attachments/assets/1e2247f0-72d4-46f9-8efd-5d291391a8e3)
+11. Add a Gauge node
+![Gauge](https://github.com/user-attachments/assets/12b01d8e-3bee-482c-b3cf-abc611aef954)
+12. In the function node, add the following text.
+```
+var value = msg.payload;
+msg.payload= {variables : [
+        {
+          "path": "Arp.Plc.Eclr/OEE_IEE1.OEE.Quality.rRework",
+          "value": value,
+          "valueType": "Constant"
+        }
+    ]
+};
+return msg;
+```
+![Function](https://github.com/user-attachments/assets/9c913bc5-2c49-4db3-93f7-9faf228e2945)
+
+13. Add a Plc-write-variables node and make sure it has the same PLC connection. You may need to deploy it before it says _connected_.
+14. Once Done, click deploy.
+15. On your browser, go to [https://192.168.1.10:51880/ui](https://192.168.1.10:51880/ui), you should be able to see the values coming through. You can also update the rework number through the UI.
 
 If you are wanting to learn more about PLCnext, consider our [training courses](https://www.phoenixcontact.com/en-au/industries/plcnext-technology/plcnextlab).
