@@ -57,7 +57,7 @@ You may find that there is an error with the library. This is likely due to how 
 ## Advanced Functionality
 
 The OEE value is logged in the PLC. I have developed a simple python script that reads this log and saves it as a CSV that can be downloaded by the controller. This script will need to be copied to the PLC for this functionality.
-1. Open up command prompt and type in _scp "\path-to-where-the-python-script-is-saved\oee-report.py" admin@plc-ip-address:~/oee-report.py_ and press enter. (For Windows machines, press `SHIFT`, right click on the file and select _Copy as Path_. Right click in command prompt to paste.) Note: you are not to be SSH'd into the PLC, this command needs to run from your machine.
+1. Open up command prompt and type in `scp "\path-to-where-the-python-script-is-saved\oee-report.py" admin@plc-ip-address:~/oee-report.py` and press enter. (For Windows machines, press `SHIFT`, right click on the file and select _Copy as Path_. Right click in command prompt to paste.) Note: you are not to be SSH'd into the PLC, this command needs to run from your machine.
 2. Enter the password for the PLC. You will not see your inputs as it is a password, so make sure it is correct and hit enter.
 3. You should see the file with 100% indicating that it has been copied across
 4. Go to the HMI and click on _Run Report_. Once complete, you should see a button to be able to download the CSV.
