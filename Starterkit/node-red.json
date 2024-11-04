@@ -2,7 +2,7 @@
     {
         "id": "480e66f81a611ad8",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "OEE",
         "disabled": false,
         "info": "",
         "env": []
@@ -11,14 +11,13 @@
         "id": "1d9aabcc9be3eacb",
         "type": "plc-read-variables",
         "z": "480e66f81a611ad8",
-        "plc_connector": "5bfa3003af61181a",
-        "variables": "Arp.Plc.Eclr/OEE",
+        "plc_connector": "b17d34f713647319",
+        "variables": "Arp.Plc.Eclr/OEE_IEE1.OEE",
         "searchbar": "",
-        "x": 310,
+        "x": 370,
         "y": 60,
         "wires": [
             [
-                "fdf01f1c27a5ffba",
                 "edd2f7dc0365d514"
             ]
         ]
@@ -27,7 +26,7 @@
         "id": "5b53b9ba8e18a557",
         "type": "inject",
         "z": "480e66f81a611ad8",
-        "name": "",
+        "name": "Inject every 5s",
         "props": [
             {
                 "p": "payload"
@@ -44,46 +43,13 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
+        "x": 140,
         "y": 60,
         "wires": [
             [
                 "1d9aabcc9be3eacb"
             ]
         ]
-    },
-    {
-        "id": "fdf01f1c27a5ffba",
-        "type": "debug",
-        "z": "480e66f81a611ad8",
-        "name": "debug 1",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 500,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "b10c06641ef9c925",
-        "type": "debug",
-        "z": "480e66f81a611ad8",
-        "name": "debug 2",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 720,
-        "y": 120,
-        "wires": []
     },
     {
         "id": "edd2f7dc0365d514",
@@ -95,7 +61,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "payload.variables[0].value.OverallOEE",
+                "to": "payload.variables[0].value.OEE",
                 "tot": "msg"
             }
         ],
@@ -104,11 +70,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 540,
+        "x": 580,
         "y": 60,
         "wires": [
             [
-                "b10c06641ef9c925",
                 "3632c7362a4615b9"
             ]
         ]
@@ -118,7 +83,7 @@
         "type": "ui_gauge",
         "z": "480e66f81a611ad8",
         "name": "",
-        "group": "50d211f4d219c7ee",
+        "group": "d75be490ec129dac",
         "order": 4,
         "width": 0,
         "height": 0,
@@ -137,7 +102,7 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 750,
+        "x": 850,
         "y": 60,
         "wires": []
     },
@@ -148,7 +113,7 @@
         "name": "",
         "label": "Rework",
         "tooltip": "",
-        "group": "50d211f4d219c7ee",
+        "group": "d75be490ec129dac",
         "order": 5,
         "width": 0,
         "height": 0,
@@ -173,16 +138,14 @@
         "id": "14904b47a03e4e67",
         "type": "plc-write-variables",
         "z": "480e66f81a611ad8",
-        "plc_connector": "5bfa3003af61181a",
+        "plc_connector": "b17d34f713647319",
         "vars": "",
         "var_list": "{\"items\":[]}",
         "searchbar": "msg.payload",
         "x": 510,
         "y": 280,
         "wires": [
-            [
-                "7422764d7876d647"
-            ]
+            []
         ]
     },
     {
@@ -190,7 +153,7 @@
         "type": "function",
         "z": "480e66f81a611ad8",
         "name": "function 1",
-        "func": "var value = msg.payload;\nmsg.payload= {variables : [\n        {\n          \"path\": \"Arp.Plc.Eclr/Rework\",\n          \"value\": value,\n          \"valueType\": \"Constant\"\n        }\n    ]\n};\n\nreturn msg;",
+        "func": "var value = msg.payload;\nmsg.payload= {variables : [\n        {\n          \"path\": \"Arp.Plc.Eclr/OEE_IEE1.OEE.Quality.rRework\",\n          \"value\": value,\n          \"valueType\": \"Constant\"\n        }\n    ]\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -201,67 +164,34 @@
         "y": 280,
         "wires": [
             [
-                "14904b47a03e4e67",
-                "b5dd3e3934484b1e"
+                "14904b47a03e4e67"
             ]
         ]
     },
     {
-        "id": "b5dd3e3934484b1e",
-        "type": "debug",
-        "z": "480e66f81a611ad8",
-        "name": "debug 3",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 480,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "7422764d7876d647",
-        "type": "debug",
-        "z": "480e66f81a611ad8",
-        "name": "debug 4",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "5bfa3003af61181a",
+        "id": "b17d34f713647319",
         "type": "plc-connector",
-        "host": "192.168.3.20",
-        "station_name": "",
+        "host": "192.168.1.15",
+        "station_name": "PLCnext",
         "session_timeout": "5000",
         "api_version": "v1.4",
-        "auth_required": "true"
+        "auth_required": "false"
     },
     {
-        "id": "50d211f4d219c7ee",
+        "id": "d75be490ec129dac",
         "type": "ui_group",
-        "name": "",
-        "tab": "373c5d9b18f2fde3",
+        "name": "OEE Dashboard",
+        "tab": "fccb06d532bb6e01",
         "order": 1,
         "disp": true,
-        "width": "8",
+        "width": "6",
         "collapse": false,
         "className": ""
     },
     {
-        "id": "373c5d9b18f2fde3",
+        "id": "fccb06d532bb6e01",
         "type": "ui_tab",
-        "name": "IIoT Gateway Connector",
+        "name": "Overall Equipment Effectiveness",
         "icon": "dashboard",
         "disabled": false,
         "hidden": false
