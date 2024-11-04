@@ -3,7 +3,6 @@ These examples have been developed to provide some insight or a starting point f
 
 These examples include a PLCnext Engineer project `*.pcwex` or `*.pcweax`. These can be downloaded and opened with the free [PLCnext Engineer](https://www.phoenixcontact.net/product/1046008) software. The most recent LTS version is recommended unless specified otherwise.
 
-## Overview
 | Folder Name | Description | Requirements |
 | ----------- | ----------- | ------------ |
 | [Alarming](Alarming) | Shows two ways of alarming on the PLCnext: Function Blocks and Alarm Server | FW ≥ 2024.0 |
