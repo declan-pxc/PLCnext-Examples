@@ -9,7 +9,7 @@ These examples include a PLCnext Engineer project `*.pcwex` or `*.pcweax`. These
 | [Data mapping](Data%20Mapping)| Shows how data can be mapped through MODBUS and Profinet between two PLCnexts | Inbuilt MODBUS Client requires PnE and FW ≥ 2024.6 |
 | [Electrolyser](Electrolyser) | Currently just a README with screenshots demonstrating the ISA 101 library being used. | N/A |
 | [Radioline selection tool](Radioline-Selection-Tool) | Shows a more complex HMI and how to write and download CSVs using PLC | N/A |
-| [Starterkit](Starterkit) | Demonstrates HMI, Python, Node-RED | Node-RED requires SD Card |
+| [Starterkit](Starterkit) | General information about IP addresses and downloading project etc. Demonstrates HMI, Python, Node-RED | Node-RED requires SD Card |
 
 ## PLCnext links and resources
 
