@@ -45,14 +45,15 @@ You may find that there is an error with the library. This is likely due to how 
 
 1. Double click on Project and select the tab _Online Controllers_.
 2. Select your ethernet interface using the drop down and click the circle disk to _scan the network_. This method uses a Profinet method for device scanning and is able to find the controller even if it is outside of your network.
+3. 
 ![project-search](https://github.com/declan-pxc/PLCnext-Examples/assets/143350935/3e749832-f923-4b90-a8ab-06eccfcdadeb)
 
-3. You can change the IP address of the PLC to something that can be connected to with your computer. (You may need to change your IP address, if you do, make sure it is different to the controller. For example, the PLC default IP address is 192.168.1.10. You may want to change your IP address to 192.168.1.11 or 192.168.1.5 - anything up to 254 that is not the same as the PLC.) Select the PLC by clicking on _Select online device here_. If the IP address is changing, give it some time to do so before the next step - 30 seconds or so.
-4. Right click on _axc-f-2152-1 : AXC F 2152_ and select _Connect_.
-5. To enter the details, default username is _admin_ and the default password can be found printed on the front of the controller. It is an 8-digit password. PLCnext Control is designed completely with [Cybersecurity](https://security.plcnext.help/se/About/Home.htm) in mind.
-6. Right click on _axc-f-2152-1 : AXC F 2152_ again and select _Write and Start Project (with Sources)_. You can do without sources as well if preferred but the sources allows you to upload the project from the controller to a computer.
-7. Open up a browser and type in the IP address of the PLCnext
-8. You should see a HMI being displayed where you can vary the values to maipulate the OEE value.
+4. You can change the IP address of the PLC to something that can be connected to with your computer. (You may need to change your IP address, if you do, make sure it is different to the controller. For example, the PLC default IP address is 192.168.1.10. You may want to change your IP address to 192.168.1.11 or 192.168.1.5 - anything up to 254 that is not the same as the PLC.) Select the PLC by clicking on _Select online device here_. If the IP address is changing, give it some time to do so before the next step - 30 seconds or so.
+5. Right click on _axc-f-2152-1 : AXC F 2152_ and select _Connect_.
+6. To enter the details, default username is _admin_ and the default password can be found printed on the front of the controller. It is an 8-digit password. PLCnext Control is designed completely with [Cybersecurity](https://security.plcnext.help/se/About/Home.htm) in mind.
+7. Right click on _axc-f-2152-1 : AXC F 2152_ again and select _Write and Start Project (with Sources)_. You can do without sources as well if preferred but the sources allows you to upload the project from the controller to a computer.
+8. Open up a browser and type in the IP address of the PLCnext
+9. You should see a HMI being displayed where you can vary the values to maipulate the OEE value.
 
 ## How the PLCnext Engineer _OEEDemo_ project works
 
@@ -95,8 +96,10 @@ This functionality shows how the PLC can be used to run additional tasks that tr
 4. Navigate on a browser to [https://192.168.1.10:51880](https://192.168.1.10:51880). This is where you can access Node-RED.
 5. Right Click on the _IIOT Gateway Connector_ example and disable it.
 6. Here is an overview of what it will look like. _Note: debug nodes were just for testing and are not required._
+7. 
 ![Node-Red Flow](https://github.com/user-attachments/assets/a84ee0a8-abb1-4abd-82a3-1290c2e21fd0)
-7. Add an inject node
+
+9. Add an inject node
 
 ![Inject](https://github.com/user-attachments/assets/2d2437a4-5268-4d8f-9c60-399747802d0f)
 
