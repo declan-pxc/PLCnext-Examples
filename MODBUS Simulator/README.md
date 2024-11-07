@@ -42,3 +42,6 @@ This allows you to manipulate the current register value.
 - __Copy Register index__ will write the address value into the register. This can be an easy way to provide a different variable to each index
 - __Swap bytes__ will swap the two bytes in the register around
 - __Shift__ and __Rotate__ will shift (or rotate) the bits left or right by the number entered into the box
+
+### Execute
+Once there is a valid range of registers and an action, you can click the __Execute__ button to write it to the registers.
