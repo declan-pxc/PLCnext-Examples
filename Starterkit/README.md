@@ -12,16 +12,7 @@ Ensure that your PLC is on Firmware (FW) 2024.0 LTS or greater.
 
 ### Changing your IP address
 
-To be able to connect to the PLC, you may need to change your IP address on your PC to ensure that you can connect. 
-1. Open control panel. You can do this with pressing _CTRL-R_, entering _control_ and pressing _OK_.
-2. Go to _Network and Internet (if viewing by category, otherwise skip) > Network and Sharing Center > Change adapter settings_ 
-3. You may see multiple options. By plugging and unplugging the PLC (that is powered on) from the computer, you should see what adapter needs to be changed.
-4. Right click on the adapter and click _properties_
-5. Double click on _Internet Protocol Version 4 (TCP/IPv4)_
-6. Make sure _Use the following IP address_ is selected.
-7. Enter an IP address and subnet. The PLC default IP address is 192.168.1.10. You may want to change your IP address to 192.168.1.11 or 192.168.1.5 - anything up to 254 that is not the same as the PLC.
-8. Enter the subnet 255.255.255.0
-9. Press _OK_, _OK_ and _close_ to save the changes and close the windows.
+To be able to connect to the PLC, you may need to change your IP address on your PC to ensure that you can connect. Follow the [steps from the Tech Help to change your PC IP Address](https://github.com/pxcanz/Tech-Help/blob/main/utils/change-ip-address.md)
 
 ### Updating Firmware
 To be able to run the example project, it was built for FW 2024 LTS. Most likely, the PLCnext out of the box will have been shipped with an older version. Follow the steps to check and update.
