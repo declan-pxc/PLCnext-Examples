@@ -10,6 +10,7 @@ These examples include a PLCnext Engineer project `*.pcwex` or `*.pcweax`. These
 | [Electrolyser](Electrolyser) | Currently just a README with screenshots demonstrating the ISA 101 library being used. | N/A |
 | [Radioline selection tool](Radioline-Selection-Tool) | Shows a more complex HMI and how to write and download CSVs using PLC | N/A |
 | [Starterkit](Starterkit) | General information about IP addresses and downloading project etc. Demonstrates HMI, Python, Node-RED | Node-RED requires SD Card |
+| [HMI Autologout](HMI-Autologout) | A way for sessions to be created with HMI clients. There are currently limitations where this has not been implemented. Note: limitation to 1 HMI session. |
 
 ## PLCnext links and resources
 
