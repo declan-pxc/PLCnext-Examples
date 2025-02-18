@@ -5,3 +5,6 @@ There is a leaderboard to keep the competition going!
 ![image](https://github.com/user-attachments/assets/31aab2c9-d642-4200-993e-12cad955f024)
 
 Feel free to add features, improvements and contribute!
+
+### HOW TO PLAY
+Get the ball into the bin! Turn on the magnet (near the ball) to move it around.
