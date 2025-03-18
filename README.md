@@ -24,5 +24,6 @@ These examples include a PLCnext Engineer project `*.pcwex` or `*.pcweax`. These
 - [PLCnext Store](https://plcnextstore.com) – PLCnext Store is where libraries and applications can be downloaded
 - [PLCnext Engineer](https://www.phoenixcontact.com/en-au/products/programming-plcnext-engineer-1046008) – the programming software can be found in the Downloads section
 - [PLCnext Runtime](https://www.plcnext-runtime.com/) – good reference for PLCnext including higher-level languages
+- [Tech Help](https://github.com/pxcanz/Tech-Help/) - resources for PLCnext and other products.
 
 Also check who I am following and repositories I have forked from other uses for additional PLCnext Github resources.
